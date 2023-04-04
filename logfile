@@ -4,3 +4,5 @@
 2023-04-02 08:25:55.245 CAT [77724] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2023-04-02 08:25:55.256 CAT [77725] LOG:  database system was shut down at 2023-04-02 08:25:46 CAT
 2023-04-02 08:25:55.263 CAT [77724] LOG:  database system is ready to accept connections
+2023-04-03 18:16:53.887 CAT [39955] ERROR:  column api_keys.token does not exist at character 43
+2023-04-03 18:16:53.887 CAT [39955] STATEMENT:  SELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" = $1 LIMIT $2
