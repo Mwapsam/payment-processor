@@ -21,6 +21,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.0.0'
   gem 'rails-controller-testing'
   gem 'faker'
+  gem 'shoulda-matchers', '~> 5.0'
 end
 
 group :development do
@@ -34,8 +35,10 @@ gem 'rubocop', '~> 1.30'
 gem 'jwt'
 gem 'active_model_serializers'
 gem 'rack-cors'
+gem 'devise_token_auth'
 gem "image_processing", "~> 1.2"
 gem 'uuid'
+gem 'devise'
 
 
 

@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/authorize/get_token', to: 'authorize#get_token'
-      resources :api_keys, path: 'api-keys', only: %i[index create destroy]
+      post "/login", to: "sessions#create"
+      resources :users
+      resources :transactions
+      resources :fees
+      resources :payment_methods
+      resources :projects
     end
   end  
 end

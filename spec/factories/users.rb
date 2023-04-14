@@ -1,7 +1,8 @@
 FactoryBot.define do
   factory :user do
-    phone_number { "MyString" }
-    role { "MyString" }
-    password_digest { "MyString" }
+    phone_number { "260963446544" }
+    name { "Mwape Dealer" }
+    role { "Developer" }
+    password_digest { "ufyqufktyagfhjvqw" }
   end
 end
