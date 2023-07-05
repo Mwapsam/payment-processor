@@ -39,6 +39,8 @@ gem 'devise_token_auth'
 gem "image_processing", "~> 1.2"
 gem 'uuid'
 gem 'devise'
+gem 'geocoder'
+
 
 
 

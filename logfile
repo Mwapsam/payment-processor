@@ -6,3 +6,9 @@
 2023-04-02 08:25:55.263 CAT [77724] LOG:  database system is ready to accept connections
 2023-04-03 18:16:53.887 CAT [39955] ERROR:  column api_keys.token does not exist at character 43
 2023-04-03 18:16:53.887 CAT [39955] STATEMENT:  SELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" = $1 LIMIT $2
+2023-07-03 04:12:22.278 CAT [47026] LOG:  starting PostgreSQL 14.7 (Homebrew) on x86_64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.202), 64-bit
+2023-07-03 04:12:22.281 CAT [47026] LOG:  listening on IPv6 address "::1", port 5432
+2023-07-03 04:12:22.281 CAT [47026] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-07-03 04:12:22.282 CAT [47026] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-07-03 04:12:22.287 CAT [47027] LOG:  database system was shut down at 2023-07-03 04:12:11 CAT
+2023-07-03 04:12:22.291 CAT [47026] LOG:  database system is ready to accept connections
