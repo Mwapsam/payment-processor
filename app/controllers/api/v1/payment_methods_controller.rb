@@ -40,6 +40,6 @@ class Api::V1::PaymentMethodsController < ApplicationController
   
     def payment_method_params
       # params.require(:payment_method).permit(:name, :description)
-      params.permit(:payment_method_name, :payment_method_type, :fee_structure)
+      params.permit(:payment_method_name, :payment_method_type, :fee_structure, :image)
     end
 end
