@@ -11,13 +11,22 @@ class Api::V1::FeesController < ApplicationController
     end
   
     def create
-      @fee = Fee.new(fee_params)
-      if @fee.save
+      payment_method = PaymentMethod.find_by(id: fee_params[:payment_method_id])
+      @fee = payment_method.fee
+    
+      if @fee.nil?
+        @fee = payment_method.create_fee(fee_params)
+      else
+        @fee.update(fee_params)
+      end
+    
+      if @fee.persisted?
         render json: @fee, status: :created
       else
         render json: @fee.errors, status: :unprocessable_entity
       end
     end
+    
   
     def update
       if @fee.update(fee_params)
@@ -39,7 +48,6 @@ class Api::V1::FeesController < ApplicationController
     end
   
     def fee_params
-      # params.require(:fee).permit(:name, :amount, :payment_method_id)
-      params.permit(:transaction_amount, :fee_percentage, :payment_method_id)
-    end
+      params.require(:fee).permit(:fee_percentage, :payment_method_id)
+    end    
 end
