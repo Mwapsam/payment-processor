@@ -4,7 +4,6 @@ class Api::V1::ProjectsController < ApplicationController
   
     def index
       @projects = @current_user.projects
-  
       render json: @projects
     end
   
@@ -14,9 +13,7 @@ class Api::V1::ProjectsController < ApplicationController
   
     def create
       @project = @current_user.projects.new(project_params)
-      
-      response.headers['Access-Control-Allow-Origin'] = 'http://127.0.0.1:5173'
-      response.headers['Access-Control-Allow-Credentials'] = 'true'
+  
       if @project.save
         render json: @project, status: :created
       else
